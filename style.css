@@ -246,6 +246,7 @@ section.cta {
   }
   .cta__content .btn-secondary {
     display: inline;
+    width: auto;
   }
   .cta__content p {
     text-align: left;
