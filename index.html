@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Test</title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main id="main">
+    <nav>
+      <div class="container">
+        <div class="nav">
+          <a href="index.html"><img src="./images/logo.svg" alt="Logo"></a>
+          <button class="hamburger" id="hamburger" onclick="openNav()">
+            <img src="./images/menu.svg" alt="Menu Icon">
+          </button>
+          <button class="close-icon" id="close" onclick="closeNav()">
+            <img src="./images/close.svg" alt="Close Icon">
+          </button>
+          <ul class="nav__menu" id="nav__menu">
+            <li class="nav__item"><a href="#" class="nav__link">Menu Link Again</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Menu Link See</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Menu Link</a></li>
+            <li class="nav__item"><a href="#" class="nav__link button">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <header>
+      <div class="container">
+        <div class="header__content">
+          <h1>We Do Awesome Things</h1>
+          <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.</h3>
+          <div class="header__image">
+            <img src="./images/tropical.png" alt="Tropical Summer">
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="cta">
+      <div class="container">
+        <div class="cta__content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit!</p>
+          <button class="btn btn-secondary">Call Now</button>
+        </div>
+      </div>
+    </section>
+    <section class="services">
+      <div class="container">
+        <div class="services__content">
+          <h1>We Do Really Awesome Things</h1>
+          <h3>Lorem ipsum dolor sit amet, <a href="#">link</a> consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.</h3>
+          <div class="services__description">
+            <div class="services__item">
+              <img src="./images/serviceitem-one.svg" alt="Service Item One">
+              <h5>Service Name</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+            </div>
+            <div class="services__item">
+              <img src="./images/serviceitem-two.svg" alt="Service Item One">
+              <h5>Service Name</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+            </div>
+            <div class="services__item">
+              <img src="./images/serviceitem-three.svg" alt="Service Item One">
+              <h5>Service Name</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="testimonial">
+      <div class="container">
+        <div class="testimonial__content">
+          <div class="testimonial__content__inner">
+            <img src="./images/blockquote.svg" alt="blockquote" class="testimonial__image">
+            <div class="testimonial__text">
+              <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.</h3>
+                <span>Roy Barber - Damage</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact">
+      <div class="container">
+        <div class="contact__header">
+          <h1>Contact About Awesomeness</h1>
+          <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.</h3>
+        </div>
+        <div class="form">
+          <form action="">
+            <div class="form__group">
+              <label for="name">Your Name</label>
+              <div class="input__group">
+                <input type="text" name="name" id="name" placeholder="Please enter your name" class="form__control">
+                <span>*</span>
+              </div>
+            </div>
+            <div class="form__group">
+              <label for="name">Your Telephone Number</label>
+              <div class="input__group">
+                <input type="tel" name="phone" id="phone" placeholder="Please enter your telephone number"
+                  class="form__control">
+                <span>*</span>
+              </div>
+            </div>
+            <div class="form__group">
+              <label for="name">Your Email Address</label>
+              <div class="input__group">
+                <input type="email" name="email" id="email" placeholder="Please enter your email"
+                  class="form__control input__error">
+                <span>*</span>
+              </div>
+              <p class="error">Error: Please enter a valid email</p>
+            </div>
+            <div class="form__group last-group">
+              <label for="name">Your Message</label>
+              <div class="input__group">
+                <textarea name="message" id="message" placeholder="Please enter your message"
+                  class="form__control"></textarea>
+                <span>*</span>
+              </div>
+            </div>
+            <span class="note">Please enter as much details as possible</span>
+            <button type="submit" class="btn btn-secondary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="footer__content">
+          <p>© 2020 <span class="text-color">Code Test</span> - All rights reserved</p>
+          <img src="./images/logo-white.svg" alt="Logo">
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+     var navmenu = document.getElementById('nav__menu');
+     var main = document.getElementById("main");
+
+    function openNav() {
+      navmenu.classList.add('active');
+      navmenu.style.width = "200px";
+      main.style.position = "absolute";
+      main.style.right = "200px";
+      document.getElementById('hamburger').style.display = "none";
+      document.getElementById('close').style.display = "block";
+    }
+
+    function closeNav() {
+      navmenu.classList.remove('active');
+      navmenu.style.width = "0";
+      main.style.position = "relative";
+      main.style.right = "0";
+      document.getElementById('close').style.display = "none";
+      document.getElementById('hamburger').style.display = "block";
+    }
+  </script>
+
+</body>
+
+</html>
