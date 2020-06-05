@@ -245,7 +245,7 @@ section.cta {
     flex-direction: row;
   }
   .cta__content .btn-secondary {
-    display: inline;
+    display: block;
     width: auto;
   }
   .cta__content p {
